@@ -1,0 +1,555 @@
+@using Core.Reporting.Infrastructure.Mvc
+@using Core.Reporting.Models.View
+@model ReportView
+@*Helpful css selector link:  http://www.w3.org/TR/CSS2/selector.html*@
+<style type="text/css">
+	html *
+	{
+	   font-size: 17px;
+	   font-family: Arial;
+	}
+	.demographic-label
+	{
+		font-weight: bold;
+		text-align: left;
+		width: 1.75in;
+	}
+	.demographic-col
+    {
+        width: 50%;
+    }
+	.multiline
+	{
+	   white-space: pre-line;
+	}
+    .doc-header
+    {
+        background-color: #dddddd;
+        border: 1px solid black;
+        padding: 2;
+        font-size: 1em;
+    }
+    .borderless *
+    {
+        border-style: none;
+    }
+    tr.measurement-row
+    {
+        border-bottom: 1px solid black;
+        white-space: nowrap;
+    }
+    tr.measurement-row td
+    {
+        padding-right: 5px;
+    }
+    .measurement-label
+    {
+        font-weight: bold;
+        width: 3in;
+    }
+    .measurement-value
+    {
+        @*background-color: Silver;*@
+        text-align: right;
+        padding: 1;
+        width: 1in;
+    }
+    .measurement-calculation
+    {
+        text-align: right;
+        width: 1in;
+    }
+    .meas-col1
+    {
+        width: 6in;
+    }
+    .meas-spacing
+    {
+        width: 0em;
+    }
+    .meas-col2
+    {
+        width: 6in;
+        align: right;
+    }
+    .measurement-range
+	{
+		padding-left: 10px;
+		text-align: center;
+		width: 2.5in;
+	}
+    .measurement-group
+    {
+        width: 6in;
+    }
+    .measurement-subgroup
+    {
+        width: 5in;
+    }
+    table.measurements
+    {
+        border: 2px solid black;
+    }
+    .observation-label
+    {
+        vertical-align:text-top;
+        font-weight: bold;
+        width: 2in;
+    }
+    .observation-value
+    {
+        width: 100%;
+    }
+    .zeroPadding
+    {
+    	padding: 0 0 0 0;
+    }
+	.measurement-units
+	{
+		padding-right: 8px;
+		padding-left: 4px;
+	}
+</style>
+<table width="100%" align="center" class="document">
+       <tr class="borderless">
+		<td>
+            <table width="100%">
+                <tr valign="middle">
+                    <td align="left">
+                         <img src="@Url.Action("ShowLogo", "Report", new { StudyInstanceUID = Model.StudyInstanceUID, Logo_Name = "Default" })" width="200" />
+                    </td>
+                    <td align="center" width="100%">
+                        Grossmont College<br />
+                        8800 Grossmont College Drive<br />
+                        El Cajon, CA  92020<br />
+                        <a href="https://www.grossmont.edu/">www.grossmont.edu/</a>
+                    </td>
+                   </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" width="100%">
+            <h1 class="doc-header">
+               Transthoracic Echocardiographic Study Report </h1>
+        </td>
+    </tr>
+  <tr>
+		@Html.DisplayFor(modelItem => Model.Demographics)  	
+	</tr>
+    <tr>
+        <td align="center">
+            <h1 class="doc-header">
+                Observations</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                @Html.DisplayFor(modelItem => Model.Observations)
+            </table>
+        </td>
+    </tr>
+   <tr>
+        <td align="center">
+            <h1 class="doc-header">
+                Summary</h1>
+        </td>
+    </tr>
+    <tbody>
+                <tr>
+                                <td>
+                                                <ul>
+                                                @foreach (string value in Model.Summary.ValueSentences)
+                                                {
+                                                                <li>@value</li>
+                                                }
+                                                </ul>
+                                </td>
+                </tr>
+</tbody>
+            <table class="borderless">
+                <tr>
+                    <td>
+                        <b>Electronically Signed:</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="@Url.Action("ShowSignature", "Report", new { UserID = Model.Signature.UserID })" width="200" alt='@Model.Signature.DisplayName' />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="multiline">
+							@Html.DisplayFor(modelItem => Model.Signature.DisplayName)
+						</div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<table width="100%" align="center" class="document" style="page-break-before: always">
+       <tr class="borderless">
+		<td>
+            <table width="100%">
+                <tr valign="middle">
+                    <td align="left">
+                         <img src="@Url.Action("ShowLogo", "Report", new { StudyInstanceUID = Model.StudyInstanceUID, Logo_Name = "Default" })" width="200" />
+                    </td>
+                    <td align="center" width="100%">
+                        Grossmont College<br />
+                        <a href="https://www.grossmont.edu/">www.grossmont.edu/</a>
+                    </td>
+                   </tr>
+            </table>
+        </td>
+    </tr>
+	  <tr class="borderless">
+        <td>
+            <table width="100%">
+                <tr valign="top">
+                    <td class="meas-col1">
+                        <table class="measurement-group">
+                            <tr>
+                                <th width="12em">
+                                    M-Mode Dimensions
+                                </th>
+                                <th colspan="2">
+                                    Adult Values
+                                </th>
+                                <th align="center">
+                                    Normal Range
+                                </th>
+                            </tr>
+                            @Html.DisplayFor(model => model.MeasurementGroups["M-Mode Dimensions"].Measurements)
+                            <tr><td><br/></td></tr>
+                        </table>
+                        <table class="measurement-group">
+                            <tr>
+                                <th width="12em">
+                                    2D Dimensions
+                                </th>
+                                <th colspan="2">
+                                    Adult Values
+                                </th>
+                                <th align="center">
+                                    Normal Range
+                                </th>
+                            </tr>
+                            @Html.DisplayFor(model => model.MeasurementGroups["2D Dimensions"].Measurements)
+                            <tr><td><br/></td></tr>
+                        </table>
+					
+                        <table class="measurement-group">
+                            <tr>
+                                <th width="12em">
+                                    Simpsons Values
+                                </th>
+                                <th colspan="2">
+                                    Adult Values
+                                </th>
+                                <th align="center">
+                                    Normal Range
+                                </th>
+                            </tr>
+                            @Html.DisplayFor(model => model.MeasurementGroups["Simpson's Values"].Measurements)
+                            <tr><td><br/></td></tr>
+                        </table>
+                        <table class="measurement-group">
+                            <tr>
+                                <th width="12em">
+                                    Other Values
+                                </th>
+                                <th colspan="2">
+                                    Adult Values
+                                </th>
+                                <th align="center">
+                                    Normal Range
+                                </th>
+                            </tr>
+							@Html.DisplayFor(model => model.MeasurementGroups["Other Values"].Measurements)
+                            <tr><td><br/></td></tr>
+                        </table>
+                    </td>
+                    <td class="meas-spacing">
+                    </td>
+                    <td class="meas-col2">
+                    <table class="measurement-group">
+                            <tr>
+                                <th width="12em">
+                                    Mitral Valve
+                                </th>
+                                <th colspan="2">
+                                    Adult Values
+                                </th>
+                                <th align="center">
+                                    Normal Range
+                                </th>
+                            </tr>
+                             @Html.DisplayFor(model => model.MeasurementGroups["Doppler Measurements - Mitral Valve"].Measurements)
+                            <tr><td><br/></td></tr>
+                        </table>
+                        <table class="measurement-group">
+                            <tr>
+                                <th width="12em">
+                                    Tricuspid
+                                </th>
+                                <th colspan="2">
+                                    Adult Values
+                                </th>
+                                <th align="center">
+                                    Normal Range
+                                </th>
+                            </tr>
+                            @Html.DisplayFor(model => model.MeasurementGroups["Doppler Measurements - Tricuspid"].Measurements)
+                            <tr><td><br/></td></tr>
+                        </table>
+					
+                        <table class="measurement-group">
+                            <tr>
+                                <th width="12em">
+                                    Pulmonary
+                                </th>
+                                <th colspan="2">
+                                    Adult Values
+                                </th>
+                                <th align="center">
+                                    Normal Range
+                                </th>
+                            </tr>
+                            @Html.DisplayFor(model => model.MeasurementGroups["Doppler Measurements - Pulmonary"].Measurements)
+                            <tr><td><br/></td></tr>
+                        </table>
+                        <table class="measurement-group">
+                            <tr>
+                                <th width="12em">
+                                    LVOT
+                                </th>
+                                <th colspan="2">
+                                    Adult Values
+                                </th>
+                                <th align="center">
+                                    Normal Range
+                                </th>
+                            </tr>
+							@Html.DisplayFor(model => model.MeasurementGroups["Doppler Measurements - LVOT"].Measurements)
+                            <tr><td><br/></td></tr>
+                        </table>
+						<table class="measurement-group">
+                            <tr>
+                                <th width="12em">
+                                    Aortic
+                                </th>
+                                <th colspan="2">
+                                    Adult Values
+                                </th>
+                                <th align="center">
+                                    Normal Range
+                                </th>
+                            </tr>
+							 @Html.DisplayFor(model => model.MeasurementGroups["Doppler Measurements - Aortic Valve"].Measurements)
+                            <tr><td><br/></td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr class="zeroPadding">
+        <td>
+            <table width="100%">
+                <tr valign="middle">
+                    <td>
+                        <img src="@Url.Action("WallMotionImage", new { name = "be17wordy", bitmapFillStrings = Model.WallMotion.BitmapFillStrings })" width="230" alt="" />
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h1 class="doc-header">
+                                        Resting Wall Motion Rest Score: @Html.DisplayFor(model => model.WallMotion.Score)</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="@Url.Action("WallMotionImage", new { name = "AnatomicBasal17", bitmapFillStrings = Model.WallMotion.BitmapFillStrings })" width="100" alt="" />
+                                    <img src="@Url.Action("WallMotionImage", new { name = "AnatomicMidCavity17", bitmapFillStrings = Model.WallMotion.BitmapFillStrings })" width="90" alt="" />
+                                    <img src="@Url.Action("WallMotionImage", new { name = "AnatomicApical17", bitmapFillStrings = Model.WallMotion.BitmapFillStrings })" width="80" alt="" />
+                                    <img src="@Url.Action("WallMotionImage", new { name = "Anatomic4C17", bitmapFillStrings = Model.WallMotion.BitmapFillStrings })" width="70" alt="" />
+                                    <img src="@Url.Action("WallMotionImage", new { name = "Anatomic2C17", bitmapFillStrings = Model.WallMotion.BitmapFillStrings })" width="60" alt="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src='@Server.MapPath("~/Content/images/LegendHorizontal.jpg")' alt="Legend" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+@for (var rowIndex = 0; rowIndex < @Model.FreeGraphicsList.Count; rowIndex++)
+{
+<table width="100%" align="center" class="document" style="page-break-before: always">
+	  <tr class="borderless">
+		<td>
+            <table width="100%">
+                <tr valign="middle">
+                    <td align="left">
+                         <img src="@Url.Action("ShowLogo", "Report", new { StudyInstanceUID = Model.StudyInstanceUID, Logo_Name = "Default" })" width="200" />
+                    </td>
+                    <td align="center" width="100%">
+                        Grossmont College<br />
+                        <a href="https://www.grossmont.edu/">www.grossmont.edu/</a>
+                    </td>
+                   </tr>
+            </table>
+        </td>
+    </tr>
+<tr>
+        <td>
+            <table>
+               <ul>
+                        <a>
+                            <img name="FreeGraphicsList" id="freegraphimage" src="@Url.Action("ShowFreeGraphic", "Report", new { FreeGraphicID = Model.FreeGraphicsList[rowIndex].ReportDiagramEditingDBID, suid = Model.StudyInstanceUID })" width="100%" />
+                        </a> 
+                </ul>
+            </table>
+        </td>
+    </tr>
+</table>
+}
+@if (Model.ScreenShots.Count>0)
+{
+<table width="100%" align="center" class="document" style="page-break-before: always">
+      <tr class="borderless">
+		<td>
+            <table width="100%">
+                <tr valign="middle">
+                    <td align="left">
+                         <img src="@Url.Action("ShowLogo", "Report", new { StudyInstanceUID = Model.StudyInstanceUID, Logo_Name = "Default" })" width="200" />
+                    </td>
+                    <td align="center" width="100%">
+                        Grossmont College<br />
+                        <a href="https://www.grossmont.edu/">www.grossmont.edu/</a>
+                    </td>
+                   </tr>
+            </table>
+        </td>
+    </tr>
+	<tr>
+		<td align="center" width="100%">
+			<h1 class="doc-header">
+				Study Screen Shots</h1>
+		</td>
+	</tr>
+<tr>
+	<td>
+		<table width="100%">
+		   <tr>
+			<td width="512px">
+			@if (Model.ScreenShots.Count>0)
+			{
+			<a>
+				<img name="screenshots" id="thumbshotimage" src="@Url.Action("ShowScreenShotBySOP", "Report", new { suid = Model.StudyInstanceUID, sop=Model.ScreenShots[0].SOPInstanceUID, frame=Model.ScreenShots[0].FrameNumber })" width="512px" />
+				<BR>
+				@Html.DisplayFor(model => Model.ScreenShots[0].Comment)
+				<BR><BR>
+			</a>
+			}
+			</td>
+			<td width="512px">
+			@if (Model.ScreenShots.Count>1)
+			{
+			<a>
+				<img name="screenshots" id="thumbshotimage" src="@Url.Action("ShowScreenShotBySOP", "Report", new { suid = Model.StudyInstanceUID, sop=Model.ScreenShots[1].SOPInstanceUID, frame=Model.ScreenShots[1].FrameNumber })" width="512px" />
+				<BR>
+				@Html.DisplayFor(model => Model.ScreenShots[1].Comment)
+				<BR><BR>
+			</a>
+			}
+			</td>
+		   </tr>
+		   <tr>
+			<td width="512px">
+			@if (Model.ScreenShots.Count>2)
+			{
+			<a>
+				<img name="screenshots" id="thumbshotimage" src="@Url.Action("ShowScreenShotBySOP", "Report", new { suid = Model.StudyInstanceUID, sop=Model.ScreenShots[2].SOPInstanceUID, frame=Model.ScreenShots[2].FrameNumber })" width="512px" />
+				<BR>
+				@Html.DisplayFor(model => Model.ScreenShots[2].Comment)
+				<BR><BR>
+			</a>
+			}
+			</td>
+			<td width="512px">
+			@if (Model.ScreenShots.Count>3)
+			{
+			<a>
+				<img name="screenshots" id="thumbshotimage" src="@Url.Action("ShowScreenShotBySOP", "Report", new { suid = Model.StudyInstanceUID, sop=Model.ScreenShots[3].SOPInstanceUID, frame=Model.ScreenShots[3].FrameNumber })" width="512px" />
+				<BR>
+				@Html.DisplayFor(model => Model.ScreenShots[3].Comment)
+				<BR><BR>
+			</a>
+			}
+			</td>
+		   </tr>
+		   <tr>
+			<td width="512px">
+			@if (Model.ScreenShots.Count>4)
+			{
+			<a>
+				<img name="screenshots" id="thumbshotimage" src="@Url.Action("ShowScreenShotBySOP", "Report", new { suid = Model.StudyInstanceUID, sop=Model.ScreenShots[4].SOPInstanceUID, frame=Model.ScreenShots[4].FrameNumber })" width="512px" />
+				<BR>
+				@Html.DisplayFor(model => Model.ScreenShots[4].Comment)
+				<BR><BR>
+			</a>
+			}
+			</td>
+			<td width="512px">
+			@if (Model.ScreenShots.Count>5)
+			{
+			<a>
+				<img name="screenshots" id="thumbshotimage" src="@Url.Action("ShowScreenShotBySOP", "Report", new { suid = Model.StudyInstanceUID, sop=Model.ScreenShots[5].SOPInstanceUID, frame=Model.ScreenShots[5].FrameNumber })" width="512px" />
+				<BR>
+				@Html.DisplayFor(model => Model.ScreenShots[5].Comment)
+				<BR><BR>
+			</a>
+			}
+			</td>
+		   </tr>
+		   <tr>
+			<td width="512px">
+			@if (Model.ScreenShots.Count>6)
+			{
+			<a>
+				<img name="screenshots" id="thumbshotimage" src="@Url.Action("ShowScreenShotBySOP", "Report", new { suid = Model.StudyInstanceUID, sop=Model.ScreenShots[6].SOPInstanceUID, frame=Model.ScreenShots[6].FrameNumber })" width="512px" />
+				<BR>
+				@Html.DisplayFor(model => Model.ScreenShots[6].Comment)
+				<BR><BR>
+			</a>
+			}
+			</td>
+			<td width="512px">
+			@if (Model.ScreenShots.Count>7)
+			{
+			<a>
+				<img name="screenshots" id="thumbshotimage" src="@Url.Action("ShowScreenShotBySOP", "Report", new { suid = Model.StudyInstanceUID, sop=Model.ScreenShots[7].SOPInstanceUID, frame=Model.ScreenShots[7].FrameNumber })" width="512px" />
+				<BR>
+				@Html.DisplayFor(model => Model.ScreenShots[7].Comment)
+				<BR><BR>
+			</a>
+			}
+			</td>
+		   </tr>
+		</table>
+	</td>
+</tr>
+</table>
+}
+
