@@ -35,6 +35,7 @@
 				<MeasurementView Name="IVSs_2D" Label="IVSs" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="LVIDs_2D" Label="LVIDs" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="LVPWs_2D" Label="LVPWs" Format="0.0" Units="cm" Range="0.9 - 1.8 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="LVOTDiam_2D" Label="LVOT Diam" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />	
 				<MeasurementView Name="AodRootDiam_2D" Label="AoRoot Diam" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="AscAorta_2D" Label="Ao Ascend Diam" Format="0.0" Units="cm" Range="&lt;3.4 cm" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="ACS_2D" Label="Ao Cusp Sep" Format="0.0" Units="cm" Range="1.5 - 2.6 cm" Subtype="Distance" Type="Length (2D)" />
@@ -45,7 +46,7 @@
 				<MeasurementView Name="LAs_Length_4ch" Label="LA Length A4C" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="LAs_Length_2ch" Label="LA Length A2C" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="FS_2D" Label="% FS" Format="0" Units="%" Range="27 - 45%" Calculation="if (LVIDd_2D&gt;0, (LVIDd_2D-LVIDs_2D)/LVIDd_2D * 100, '')" Subtype="Volume" Type="Volume/EF" />
-				<MeasurementView Name="EF_2D_percent" Label="% EF 2D" Format="0" Units="%" Range="50 - 85%" Calculation="if (LVIDd_2D&gt;0, (LVIDd_2D^3-LVIDs_2D^3)/LVIDd_2D^3 * 100, '')" Subtype="Volume" Type="Volume/EF"/>
+				<MeasurementView Name="EF_2D_percent" Label="% EF 2D" Format="0" Units="%" Range="50 - 85%" Calculation="if (LVIDd_2D&gt;0, ((LVIDd_2D*LVIDd_2D*LVIDd_2D-LVIDs_2D*LVIDs_2D*LVIDs_2D)/LVIDd_2D*LVIDd_2D*LVIDd_2D) * 100, '')" Subtype="Volume" Type="Volume/EF"/>
 			</Measurements>
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Simpson's Values">
