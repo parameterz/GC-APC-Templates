@@ -46,7 +46,7 @@
 				<MeasurementView Name="LAs_Length_4ch" Label="LA Length A4C" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="LAs_Length_2ch" Label="LA Length A2C" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="FS_2D" Label="% FS" Format="0" Units="%" Range="27 - 45%" Calculation="if (LVIDd_2D&gt;0, (LVIDd_2D-LVIDs_2D)/LVIDd_2D * 100, '')" Subtype="Volume" Type="Volume/EF" />
-				<MeasurementView Name="EF_2D_percent" Label="% EF 2D" Format="0" Units="%" Range="50 - 85%" Calculation="if (LVIDd_2D&gt;0, ((LVIDd_2D*LVIDd_2D*LVIDd_2D-LVIDs_2D*LVIDs_2D*LVIDs_2D)/(LVIDd_2D*LVIDd_2D*LVIDd_2D)) * 100, '')" Subtype="Volume" Type="Volume/EF"/>
+				<MeasurementView Name="EF_2D_percent" Label="% EF 2D (cube)" Format="0" Units="%" Range="50 - 85%" Calculation="if (LVIDd_2D&gt;0, ((LVIDd_2D^3-LVIDs_2D^3)/(LVIDd_2D^3)) * 100, '')" Subtype="Volume" Type="Volume/EF"/>
 			</Measurements>
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Simpson's Values">
@@ -66,7 +66,7 @@
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Other Values">
 			<Measurements>
-				<MeasurementView Name="LVOTDiam_2D" Label="LVOT Diam" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="LVOTDiam_2D" Label="LVOT Diam" Format="0.00" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="IVC_Diameter" Label="IVC" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
 				<MeasurementView Name="IVRTime" Label="IVRT" Format="0" Units="ms" Range="58 - 82 ms" Subtype="Time" Type="Calculation" />
 				<MeasurementView Name="LV_Mass" Label="LV Mass" Format="0" Units="g" Range="67 - 162 g" Calculation="1.04*((Pow((LVIDd_2D+IVSd_2D+LVPWd_2D), 3)-Pow(LVIDd_2D, 3))*0.8)+0.6" />
@@ -120,7 +120,7 @@
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Doppler Measurements - LVOT">
 			<Measurements>
-				<MeasurementView Name="LVV1VTI" Label="LV VTI" Format="0.0" Units="cm" Subtype="VTI" Type="Doppler VTI" />
+				<MeasurementView Name="LVV1VTI" Label="LV VTI" Format="0.00" Units="cm" Subtype="VTI" Type="Doppler VTI" />
 				<MeasurementView Name="LVV1Max" Label="Peak Velocity" Format="0.0" Units="m/s" Range="0.7 - 1.1 m/s" Subtype="Velocity" Type="Doppler Velocity" />
 				<MeasurementView Name="LVVIMean" Label="Mean Velocity" Format="0.0" Units="m/s" Range="" Subtype="Velocity" Type="Mean Velocity" />
 				<MeasurementView Name="LVMaxPG" Label="Peak PG" Format="0" Units="mmHg" Calculation="if (LVV1Max&gt;0, Pow(LVV1Max, 2)*4, '')" />
@@ -131,12 +131,12 @@
 			<Measurements>
 				<MeasurementView Name="AoV2Max" Label="Peak Velocity" Format="0.0" Units="m/s" Range="0.9 - 1.7 m/s" Subtype="Velocity" Type="Doppler Velocity" />
 				<MeasurementView Name="AoV2Mean" Label="Mean Velocity" Format="0.0" Units="m/s" Range="" Subtype="Velocity" Type="Mean Velocity" />
-				<MeasurementView Name="AoV2VTI_mVTI" Label="Ao VTI" Format="0.0" Units="cm" Subtype="VTI" Type="Doppler VTI" />
+				<MeasurementView Name="AoV2VTI_mVTI" Label="Ao VTI" Format="0.00" Units="cm" Subtype="VTI" Type="Doppler VTI" />
 				<MeasurementView Name="AoMaxPG" Label="Peak PG" Format="0" Units="mmHg" Range="&lt;10 mmHg" Calculation="if (AoV2Max&gt;0, Pow(AoV2Max, 2)*4, '')" />
 				<MeasurementView Name="AoMeanPG" Label="Mean PG" Format="0" Units="mmHg" Range="&lt;10 mmHg" Subtype="AV" Type="Mean Pressure Gradient" />
 				<MeasurementView Name="AoPHT" Label="Press Half Time" Format="0.0" Units="ms" Subtype="PH" Type="Pressure Halftime" />
-				<MeasurementView Name="AVA" Label="AVA" Format="0.0" Units="cm²" Range="2.5 - 3.5 cm²" Calculation="if(AoV2VTI_mVTI&gt;0, (0.785*(LVOTDiam_2D)^2 * LVV1VTI)/AoV2VTI_mVTI, '')" />
-				<MeasurementView Name="DVI" Label="DVI" Format="0.0" Units="" Range="" Calculation="if (LVV1VTI&gt;0, LVV1VTI/AoV2VTI_mVTI, '')" />
+				<MeasurementView Name="AVA" Label="AVA" Format="0.00" Units="cm²" Range="2.5 - 3.5 cm²" Calculation="if(AoV2VTI_mVTI&gt;0, (0.785*(LVOTDiam_2D)^2 * LVV1VTI)/AoV2VTI_mVTI, '')" />
+				<MeasurementView Name="DVI" Label="DVI" Format="0.00" Units="" Range="" Calculation="if (LVV1VTI&gt;0, LVV1VTI/AoV2VTI_mVTI, '')" />
 			</Measurements>
 		</MeasurementGroupView>
 	</MeasurementGroups>
