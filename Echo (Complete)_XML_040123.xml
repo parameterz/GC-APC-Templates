@@ -135,7 +135,7 @@
 				<MeasurementView Name="AoMaxPG" Label="Peak PG" Format="0" Units="mmHg" Range="&lt;10 mmHg" Calculation="if (AoV2Max&gt;0, Pow(AoV2Max, 2)*4, '')" />
 				<MeasurementView Name="AoMeanPG" Label="Mean PG" Format="0" Units="mmHg" Range="&lt;10 mmHg" Subtype="AV" Type="Mean Pressure Gradient" />
 				<MeasurementView Name="AoPHT" Label="Press Half Time" Format="0.0" Units="ms" Subtype="PH" Type="Pressure Halftime" />
-				<MeasurementView Name="AVA" Label="AVA" Format="0.00" Units="cm²" Range="2.5 - 3.5 cm²" Calculation="if(AoV2VTI_mVTI&gt;0, (0.785*(LVOTDiam_2D)^2 * LVV1VTI)/AoV2VTI_mVTI, '')" />
+				<MeasurementView Name="AVA" Label="AVA (VTI)" Format="0.00" Units="cm²" Range="2.5 - 3.5 cm²" Calculation="if(AoV2VTI_mVTI&gt;0, (LVOTDiam_2D*LVV1VTI)*AoV2VTI_mVTI, '')" />
 				<MeasurementView Name="DVI" Label="DVI" Format="0.00" Units="" Range="" Calculation="if (LVV1VTI&gt;0, LVV1VTI/AoV2VTI_mVTI, '')" />
 			</Measurements>
 		</MeasurementGroupView>
