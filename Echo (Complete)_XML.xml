@@ -9,124 +9,134 @@
 	<MeasurementGroups>
 		<MeasurementGroupView Label="M-Mode Dimensions">
 			<Measurements>
-				<MeasurementView Name="RVDd_MM" Label="RVIDd" Format="0.0" Units="cm" Range="0.7 - 2.3 cm" Subtype="Distance" />
-				<MeasurementView Name="IVSd_MM" Label="IVSd" Format="0.0" Units="cm" Range="0.6 - 1.1 cm" Subtype="Distance" />
-				<MeasurementView Name="IVSs_MM" Label="IVSs" Format="0.0" Units="cm" Range="" Subtype="Distance" />
-				<MeasurementView Name="LVIDd_MM" Label="LVIDd" Format="0.0" Units="cm" Range="3.5 - 5.5 cm" Subtype="Distance" />
-				<MeasurementView Name="LVIDs_MM" Label="LVIDs" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" />
-				<MeasurementView Name="LVPWd_MM" Label="LVPWd" Format="0.0" Units="cm" Range="0.6 - 1.1 cm" Subtype="Distance" />
-				<MeasurementView Name="LVPWs_MM" Label="LVPWs" Format="0.0" Units="cm" Range="0.9 - 1.8 cm" Subtype="Distance" />
-				<MeasurementView Name="AodRootDiam_MM" Label="AoRoot Diam" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" />
-				<MeasurementView Name="AscAorta_MM" Label="Ao Ascend Diam" Format="0.0" Units="cm" Range="&lt;3.4 cm" Subtype="Distance" />
-				<MeasurementView Name="ACS_MM" Label="Ao Cusp Sep" Format="0.0" Units="cm" Range="1.5 - 2.6 cm" Subtype="Distance" />
-				<MeasurementView Name="LAdDiam_MM" Label="LA Diameter" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" />
-				<MeasurementView Name="AscAorta_MM" Label="Ao Ascend Diam" Format="0.0" Units="cm" Range="&lt;3.4 cm" Subtype="Distance" />
-				<MeasurementView Name="FS_MM" Label="% FS MM" Format="0" Units="%" Range="30 - 45%" />
-				<MeasurementView Name="EF_MM_percent" Label="% EF M-Mode" Format="0" Units="%" Range="" />
-				<MeasurementView Name="EPSS_MM" Label="EPSS" Format="0.0" Units="cm" Range="1.0 cm" Subtype="Distance" />
+				<MeasurementView Name="RVDd_MM" Label="RVIDd" Format="0.0" Units="cm" Range="0.7 - 2.3 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="IVSd_MM" Label="IVSd" Format="0.0" Units="cm" Range="0.6 - 1.1 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="IVSs_MM" Label="IVSs" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="LVIDd_MM" Label="LVIDd" Format="0.0" Units="cm" Range="3.5 - 5.5 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="LVIDs_MM" Label="LVIDs" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="LVPWd_MM" Label="LVPWd" Format="0.0" Units="cm" Range="0.6 - 1.1 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="LVPWs_MM" Label="LVPWs" Format="0.0" Units="cm" Range="0.9 - 1.8 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="AodRootDiam_MM" Label="AoRoot Diam" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="AscAorta_MM" Label="Ao Ascend Diam" Format="0.0" Units="cm" Range="&lt;3.4 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="ACS_MM" Label="Ao Cusp Sep" Format="0.0" Units="cm" Range="1.5 - 2.6 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="LAdDiam_MM" Label="LA Diameter" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="AscAorta_MM" Label="Ao Ascend Diam" Format="0.0" Units="cm" Range="&lt;3.4 cm" Subtype="Distance" Type="Length (Mmode)" />
+				<MeasurementView Name="FS_MM" Label="% FS MM" Format="0" Units="%" Range="30 - 45%" Subtype="Volume" Type="Calculation" />
+				<MeasurementView Name="EF_MM_percent" Label="% EF M-Mode" Format="0" Units="%" Range="" Subtype="Volume" Type="Calculation" />
+				<MeasurementView Name="EPSS_MM" Label="EPSS" Format="0.0" Units="cm" Range="1.0 cm" Subtype="Distance" Type="Length (Mmode)" />
 			</Measurements>
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="2D Dimensions">
 			<Measurements>
-				<MeasurementView Name="RVDd_2D" Label="RVDd" Format="0.0" Units="cm" Range="0.7 - 2.3 cm" Subtype="Distance" />
-				<MeasurementView Name="IVSd_2D" Label="IVSd" Format="0.0" Units="cm" Range="0.6 - 1.1 cm" Subtype="Distance" />
-				<MeasurementView Name="IVSs_2D" Label="IVSs" Format="0.0" Units="cm" Range="" Subtype="Distance" />
-				<MeasurementView Name="LVIDd_2D" Label="LVIDd" Format="0.0" Units="cm" Range="3.5 - 5.6 cm" Subtype="Distance" />
-				<MeasurementView Name="LVIDs_2D" Label="LVIDs" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" />
-				<MeasurementView Name="LVPWd_2D" Label="LVPWd" Format="0.0" Units="cm" Range="0.6 - 1.1 cm" Subtype="Distance" />
-				<MeasurementView Name="LVPWs_2D" Label="LVPWs" Format="0.0" Units="cm" Range="0.9 - 1.8 cm" Subtype="Distance" />
-				<MeasurementView Name="AodRootDiam_2D" Label="AoRoot Diam" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" />
-				<MeasurementView Name="AscAorta_2D" Label="Ao Ascend Diam" Format="0.0" Units="cm" Range="&lt;3.4 cm" Subtype="Distance" />
-				<MeasurementView Name="ACS_2D" Label="Ao Cusp Sep" Format="0.0" Units="cm" Range="1.5 - 2.6 cm" Subtype="Distance" />
-				<MeasurementView Name="LADim_2D" Label="LA Diameter" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" />
-				<MeasurementView Name="LAs_Area_4ch" Label="LA Area ESV A4C" Format="0.0" Units="cm²" Range="" Subtype="Area" />
-				<MeasurementView Name="LAs_Area_2ch" Label="LA Area ESV A2C" Format="0.0" Units="cm²" Range="" Subtype="Area" />
-				<MeasurementView Name="LAs_Length_4ch" Label="LA Length A4C" Format="0.0" Units="cm" Range="" Subtype="Distance" />
-				<MeasurementView Name="LAs_Length_2ch" Label="LA Length A2C" Format="0.0" Units="cm" Range="" Subtype="Distance" />
-				<MeasurementView Name="LV_EDV_2D" Label="LV EDV 2D" Format="0" Units="ml" Range="" Subtype="Volume" />
-				<MeasurementView Name="LV_ESV_2D" Label="LV ESV 2D" Format="0" Units="ml" Range="" Subtype="Volume" />
-				<MeasurementView Name="FS_2D" Label="% FS 2D" Format="0" Units="%" Range="27 - 45%" />
-				<MeasurementView Name="EF_2D_percent" Label="% EF 2D" Format="0" Units="%" Range="50 - 85%" />
+				<MeasurementView Name="RVDd_2D" Label="RVDd" Format="0.0" Units="cm" Range="0.7 - 2.3 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="IVSd_2D" Label="IVSd" Format="0.0" Units="cm" Range="0.6 - 1.1 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="LVIDd_2D" Label="LVIDd" Format="0.0" Units="cm" Range="3.5 - 5.6 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="LVPWd_2D" Label="LVPWd" Format="0.0" Units="cm" Range="0.6 - 1.1 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="IVSs_2D" Label="IVSs" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="LVIDs_2D" Label="LVIDs" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="LVPWs_2D" Label="LVPWs" Format="0.0" Units="cm" Range="0.9 - 1.8 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="AodRootDiam_2D" Label="AoRoot Diam" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="AscAorta_2D" Label="Ao Ascend Diam" Format="0.0" Units="cm" Range="&lt;3.4 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="ACS_2D" Label="Ao Cusp Sep" Format="0.0" Units="cm" Range="1.5 - 2.6 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="LADim_2D" Label="LA Diameter" Format="0.0" Units="cm" Range="2.0 - 4.0 cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="RA_dim" Label="RA Diameter" Format="0.0" Units="cm" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="LAs_Area_4ch" Label="LA Area ESV A4C" Format="0.0" Units="cm²" Range="" Subtype="Area" Type="Area" />
+				<MeasurementView Name="LAs_Area_2ch" Label="LA Area ESV A2C" Format="0.0" Units="cm²" Range="" Subtype="Area" Type="Area" />
+				<MeasurementView Name="LAs_Length_4ch" Label="LA Length A4C" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="LAs_Length_2ch" Label="LA Length A2C" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="FS_2D" Label="% FS" Format="0" Units="%" Range="27 - 45%" Calculation="if (LVIDd_2D&gt;0, (LVIDd_2D-LVIDs_2D)/LVIDd_2D * 100, '')" Subtype="Volume" Type="Volume/EF" />
+				<MeasurementView Name="EF_2D_percent" Label="% EF 2D" Format="0" Units="%" Range="50 - 85%" Calculation="((((7/(2.4 + LVIDd_2D))*(Pow(LVIDd_2D, 3)))-((7/(2.4 + LVIDs_2D))*(Pow(LVIDs_2D, 3))))/((7/(2.4 + LVIDd_2D))*(Pow(LVIDd_2D, 3))))*100" Subtype="Volume" Type="Volume/EF" />
 			</Measurements>
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Simpson's Values">
 			<Measurements>
-				<MeasurementView Name="EDV_ap4_MOD" Label="4CH-EDV" Format="0" Units="ml" Range="56 - 155 ml" Subtype="Volume" />
-				<MeasurementView Name="ESV_ap4_MOD" Label="4CH-ESV" Format="0" Units="ml" Range="19 - 58 ml" Subtype="Volume" />
-				<MeasurementView Name="EF_MOD_sp4" Label="4CH-EF%" Format="0" Units="%" Range="55 – 85%" />
-				<MeasurementView Name="EDV_ap2_MOD" Label="2CH-EDV" Format="0" Units="ml" Range="56 - 155 ml" Subtype="Volume" />
-				<MeasurementView Name="ESV_ap2_MOD" Label="2CH-ESV" Format="0" Units="ml" Range="19 - 58 ml" Subtype="Volume" />
-				<MeasurementView Name="EF_MOD_sp2" Label="2CH-EF%" Format="0" Units="%" Range="55 – 85%" />
-				<MeasurementView Name="EF_Biplane" Label="% EF Simpson's" Format="0" Units="%" Range="55 – 85%" />
+				<MeasurementView Name="EDV_ap4_MOD" Label="EDV-4ch" Format="0" Units="ml" Range="56 - 155 ml" Subtype="Volume" Type="Volume/EF" />
+				<MeasurementView Name="ESV_ap4_MOD" Label="ESV-4ch" Format="0" Units="ml" Range="19 - 58 ml" Subtype="Volume" Type="Volume/EF" />
+				<MeasurementView Name="EF_MOD_sp4" Label="%EF 4ch" Format="0" Units="%" Range="55 – 85%" Calculation="if (EDV_ap4_MOD&gt;0, (EDV_ap4_MOD-ESV_ap4_MOD)/EDV_ap4_MOD * 100, '')" />
+				<MeasurementView Name="EDV_ap2_MOD" Label="EDV-2ch" Format="0" Units="ml" Range="56 - 155 ml" Subtype="Volume" Type="Volume/EF" />
+				<MeasurementView Name="ESV_ap2_MOD" Label="ESV-2ch" Format="0" Units="ml" Range="19 - 58 ml" Subtype="Volume" Type="Volume/EF" />
+				<MeasurementView Name="EF_MOD_sp2" Label="%EF 2ch" Format="0" Units="%" Range="55 – 85%" Calculation="if (EDV_ap2_MOD&gt;0, (EDV_ap2_MOD-ESV_ap2_MOD)/EDV_ap2_MOD * 100, '')" />
+				<MeasurementView Name="EDV_Biplane" Label="EDV Simpson's" Format="0" Units="ml" Range="56 - 155 ml" Subtype="Volume" Type="Volume/EF" />
+				<MeasurementView Name="EDVBiplane_BSA" Label="EDV Index" Format="0.0" Units="ml/m²" Range="" Calculation="if (EDV_Biplane&gt;0, EDV_Biplane/BSA, '')" />
+				<MeasurementView Name="ESV_Biplane" Label="ESV Simpson's" Format="0" Units="ml" Range="56 - 155 ml" Subtype="Volume" Type="Volume/EF" />
+				<MeasurementView Name="ESVBiplane_BSA" Label="ESV Index" Format="0.0" Units="ml/m²" Range="" Calculation="if (ESV_Biplane&gt;0, ESV_Biplane/BSA, '')" />
+				<MeasurementView Name="EF_Biplane" Label="% EF Simpson's" Format="0" Units="%" Range="55 – 85%" Calculation="if (EDV_Biplane&gt;0, (EDV_Biplane-ESV_Biplane)/EDV_Biplane * 100, '')" />
 			</Measurements>
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Other Values">
 			<Measurements>
-				<MeasurementView Name="LVOTDiam_2D" Label="LVOT Diam" Format="0.0" Units="cm" Range="" Subtype="Distance" />
-				<MeasurementView Name="IVRTime" Label="IVRT" Format="0" Units="ms" Range="58 - 82 ms" Subtype="Time" />
-				<MeasurementView Name="RWT_2D" Label="RWT" Format="0.0" Units="" Range="" Subtype="Distance" />
-				<MeasurementView Name="LV_Mass" Label="LV Mass" Format="0" Units="g" Range="87 - 174 " />
-				<MeasurementView Name="LV_Mass_Index" Label="LV Mass Indexed" Format="0.0" Units="g/m²" />
-				<MeasurementView Name="LAVolume" Label="LA Volume" Format="0.00" Units="ml" Subtype="Volume" />
-				<MeasurementView Name="LAVolume_BSA" Label="LA Vol Indexed" Format="0.0" Units="mL/m²" Range="25 - 35" Subtype="Volume" />
-				<MeasurementView Name="Gen_Qp_Qs_ratio" Label="Qp:Qs" Format="0.00" Units="cm" Range="" />
+				<MeasurementView Name="LVOTDiam_2D" Label="LVOT Diam" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="IVC_Diameter" Label="IVC" Format="0.0" Units="cm" Range="" Subtype="Distance" Type="Length (2D)" />
+				<MeasurementView Name="IVRTime" Label="IVRT" Format="0" Units="ms" Range="58 - 82 ms" Subtype="Time" Type="Calculation" />
+				<MeasurementView Name="LV_Mass" Label="LV Mass" Format="0" Units="g" Range="67 - 162 g" Calculation="1.04*((Pow((LVIDd_2D+IVSd_2D+LVPWd_2D), 3)-Pow(LVIDd_2D, 3))*0.8)+0.6" />
+				<MeasurementView Name="LV_Mass_Index" Label="LV Mass Index" Format="0.0" Units="g/m²" Range="43 - 95 g/m²" Calculation="if (LV_Mass&gt;0, LV_Mass/BSA, '')" />
+				<MeasurementView Name="LAVolume" Label="LA Volume" Format="0.00" Units="ml" Range="" Subtype="Volume" Type="Volume/EF" />
+				<MeasurementView Name="LAVolume_BSA" Label="LA Volume Index" Format="0.0" Units="ml/m²" Range="&lt;30 ml/m²" Calculation="if (LAVolume&gt;0, LAVolume/BSA, '')" />
+				<MeasurementView Name="Gen_Qp_Qs_ratio" Label="Qp:Qs" Format="0.00" Units="cm" Range="" Type="Calculation" />
 			</Measurements>
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Doppler Measurements - Mitral Valve">
 			<Measurements>
-				<MeasurementView Name="MV_max_vel" Label="Peak Velocity" Format="0.0" Units="m/s" Range="" Subtype="Velocity" />
-				<MeasurementView Name="MVMeanPG" Label="Mean Gradient" Format="0" Units="mmHg" Subtype="AV" />
-				<MeasurementView Name="MVA_PHT" Label="MVA" Format="0.0" Units="cm²" Range="4.0 - 6.0 cm²" />
-				<MeasurementView Name="MV_PHT_mPHT" Label="Press Half Time" Format="0" Units="ms" Subtype="PHT" />
-				<MeasurementView Name="MVDecTime" Label="Decel Time" Format="0" Units="ms" Range="160 - 240 ms" Subtype="Time" />
-				<MeasurementView Name="MVEPoint" Label="Peak E" Format="0.00" Units="m/s" Range="0.60 - 1.30 m/s" Subtype="Velocity" />
-				<MeasurementView Name="MVAPoint" Label="Peak A" Format="0.00" Units="m/s" Range="0.30 - 0.60 m/s" Subtype="Velocity" />
-				<MeasurementView Name="MVEtoA" Label="E to A Ratio" Format="0.00" Units="" Range="0.8 – 2.5" />
-				<MeasurementView Name="E_Med" Label="E Medial" Format="0.0" Units="m/s" Range="" Subtype="Velocity" />
-				<MeasurementView Name="E_Lat" Label="E Lateral" Format="0.0" Units="m/s" Subtype="Velocity" />
-				<MeasurementView Name="EtoE_Med" Label="E to E Medial" Format="0.00" Units="" Range="" />
-				<MeasurementView Name="EtoE_Lat" Label="E to E Lateral" Format="0.00" Units="" Range="" />
-				<MeasurementView Name="MR_VTI" Label="MR VTI" Format="0.0" Units="cm" Subtype="VTI" />
-				<MeasurementView Name="MR_EFF_ROA" Label="MR ERO" Format="0.0" Units="mm²" />
-				<MeasurementView Name="MVRegurgVolume" Label="Regurg Volume" Format="0.0" Units="ml" Subtype="Volume" />
-				<MeasurementView Name="MVRegurgFraction" Label="Regurg Fraction" Format="0.0" Units="" />
+				<MeasurementView Name="MV_max_vel" Label="Peak Velocity" Format="0.0" Units="m/s" Range="" Subtype="Velocity" Type="Doppler Velocity" />
+				<MeasurementView Name="MVMeanPG" Label="Mean Gradient" Format="0" Units="mmHg" Subtype="AV" Type="Mean Pressure Gradient" />
+				<MeasurementView Name="MVA_PHT" Label="MVA" Format="0.0" Units="cm²" Range="4.0 - 6.0 cm²" Subtype="Area" Type="Calculation" />
+				<MeasurementView Name="MV_PHT_mPHT" Label="Press Half Time" Format="0" Units="ms" Subtype="PH" Type="Doppler Velocity" />
+				<MeasurementView Name="MVDecTime" Label="Decel Time" Format="0" Units="ms" Range="160 - 240 ms" Subtype="Time" Type="Time" />
+				<MeasurementView Name="MV_VTI" Label="MV VTI" Format="0.0" Units="cm" Subtype="VTI" Type="Doppler Velocity" />
+				<MeasurementView Name="MVEPoint" Label="Peak E" Format="0.00" Units="m/s" Range="0.60 - 1.30 m/s" Subtype="Velocity" Type="Doppler Velocity" />
+				<MeasurementView Name="MVAPoint" Label="Peak A" Format="0.00" Units="m/s" Range="0.30 - 0.60 m/s" Subtype="Velocity" Type="Doppler Velocity" />
+				<MeasurementView Name="MVEtoA" Label="E to A Ratio" Format="0.00" Units="" Range="0.8 – 2.5" Type="Calculation" />
+				<MeasurementView Name="E_Med" Label="E Medial" Format="0.00" Units="cm/s" Range="" Subtype="Velocity" Type="Mean Velocity" />
+				<MeasurementView Name="E_Lat" Label="E Lateral" Format="0.00" Units="cm/s" Subtype="Velocity" Type="Mean Velocity" />
+				<MeasurementView Name="EtoE_Med" Label="E to E Medial" Format="0.00" Units="" Range="" Calculation="if (MVEPoint&gt;0, MVEPoint/E_Med, '')" />
+				<MeasurementView Name="EtoE_Lat" Label="E to E Lateral" Format="0.00" Units="" Range="" Calculation="if (MVEPoint&gt;0, MVEPoint/E_Lat, '')" />
+				<MeasurementView Name="MR_VTI" Label="MR VTI" Format="0.0" Units="cm" Subtype="VTI" Type="Doppler Velocity" />
+				<MeasurementView Name="MR_EFF_ROA" Label="MR ERO" Format="0.0" Units="mm²" Subtype="Area" Type="Area" />
 			</Measurements>
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Doppler Measurements - Tricuspid">
 			<Measurements>
-				<MeasurementView Name="TR_PeakE" Label="TV E Vel" Format="0.0" Units="m/s" Subtype="Velocity" />
-				<MeasurementView Name="TR_PeakA" Label="TV A Vel" Format="0.0" Units="m/s" Subtype="Velocity" />
-				<MeasurementView Name="TR_PeakEtoA" Label="TV E/A" Format="0.0" Units="" />
-				<MeasurementView Name="TVV2Max" Label="TR Peak Velocity" Format="0.0" Units="m/s" Range="0.3 - 0.7 m/s" Subtype="Velocity" />
-				<MeasurementView Name="TVMaxPG" Label="Peak PG" Format="0" Units="mmHg" Subtype="PG" />
+				<MeasurementView Name="TVV2Max" Label="Peak Velocity" Format="0.0" Units="m/s" Range="0.3 - 0.7 m/s" Subtype="Velocity" />
+				<MeasurementView Name="TVMaxPG" Label="Peak PG" Format="0" Units="mmHg" Subtype="PG" Type="Peak Pressure Gradient" />
+				<MeasurementView Name="TVMeanPG" Label="Mean PG" Format="0" Units="mmHg" Subtype="AV" Type="Mean Pressure Gradient" />
+				<MeasurementView Name="TRVMax" Label="TR V Max" Format="0.0" Units="m/s" Range="0.3 - 0.7 m/s" Subtype="Velocity" />
+				<MeasurementView Name="TRMaxPG" Label="TR Peak PG" Format="0" Units="mmHg" Calculation="if (TRVMax&gt;0, Pow(TRVMax, 2)*4, '')" />
 				<MeasurementView Name="RA_PRESS" Label="RAPressure" Format="0.0" Units="mmHg" Subtype="PG" />
 				<MeasurementView Name="RVSP" Label="RVSP" Format="0" Units="mmHg" Subtype="PG" />
 			</Measurements>
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Doppler Measurements - Pulmonary">
 			<Measurements>
-				<MeasurementView Name="PAV2Max" Label="Peak Velocity" Format="0.0" Units="m/s" Range="0.5 - 1.0 m/s" Subtype="Velocity" />
-				<MeasurementView Name="PAMaxPG" Label="Peak Gradient" Format="0.0" Units="mmHg" Range="" Subtype="PG" />
-				<MeasurementView Name="PAMeanPG" Label="Mean Gradient" Format="0.0" Units="mmHg" Range="" Subtype="PG" />
+				<MeasurementView Name="PAV2Max" Label="Peak Velocity" Format="0.0" Units="m/s" Range="0.5 - 1.0 m/s" Subtype="Velocity" Type="Doppler Velocity" />
+				<MeasurementView Name="PAMaxPG" Label="Peak Gradient" Format="0.0" Units="mmHg" Range="" Calculation="if (PAV2Max&gt;0, Pow(PAV2Max, 2)*4, '')" />
+				<MeasurementView Name="PAMeanPG" Label="Mean Gradient" Format="0.0" Units="mmHg" Range="" Subtype="AV" Type="Mean Pressure Gradient" />
 				<MeasurementView Name="PAAccTime" Label="PAT" Format="0" Units="ms" Subtype="Time" />
+				<MeasurementView Name="PIV2Max" Label="PI Peak Velocity" Format="0.0" Units="m/s" Range="" Subtype="Velocity" Type="Doppler Velocity" />
+				<MeasurementView Name="PIMaxPG" Label="PI Peak Gradient" Format="0.0" Units="mmHg" Range="" Calculation="if (PIV2Max&gt;0, Pow(PIV2Max, 2)*4, '')" />
+				<MeasurementView Name="PIENDV2Max" Label="PI End Peak Velocity" Format="0.0" Units="m/s" Range="" Subtype="Velocity" Type="Doppler Velocity" />
+				<MeasurementView Name="PIMaxPG" Label="PI End Dias Gradient" Format="0.0" Units="mmHg" Range="" Calculation="if (PIENDV2Max&gt;0, Pow(PIENDV2Max, 2)*4, '')" />
 			</Measurements>
 		</MeasurementGroupView>
 		<MeasurementGroupView Label="Doppler Measurements - LVOT">
 			<Measurements>
-				<MeasurementView Name="LVV1VTI" Label="LV VTI" Format="0.0" Units="cm" Subtype="VTI" />
-				<MeasurementView Name="LVV1Max" Label="Peak Velocity" Format="0.0" Units="m/s" Range="0.7 - 1.1 m/s" Subtype="Velocity" />
-				<MeasurementView Name="LVMaxPG" Label="Peak PG" Format="0" Units="mmHg" Subtype="PG" />
+				<MeasurementView Name="LVV1VTI" Label="LV VTI" Format="0.0" Units="cm" Subtype="VTI" Type="Doppler VTI" />
+				<MeasurementView Name="LVV1Max" Label="Peak Velocity" Format="0.0" Units="m/s" Range="0.7 - 1.1 m/s" Subtype="Velocity" Type="Doppler Velocity" />
+				<MeasurementView Name="LVVIMean" Label="Mean Velocity" Format="0.0" Units="m/s" Range="" Subtype="Velocity" Type="Mean Velocity" />
+				<MeasurementView Name="LVMaxPG" Label="Peak PG" Format="0" Units="mmHg" Calculation="if (LVV1Max&gt;0, Pow(LVV1Max, 2)*4, '')" />
+				<MeasurementView Name="LVMeanPG" Label="Mean PG" Format="0" Units="mmHg" Subtype="AV" Type="Mean Pressure Gradient" />
 			</Measurements>
 		</MeasurementGroupView>
-		<MeasurementGroupView Label="Doppler Measurements- Aortic Valve">
+		<MeasurementGroupView Label="Doppler Measurements - Aortic Valve">
 			<Measurements>
-				<MeasurementView Name="AoV2Max" Label="Peak Velocity" Format="0.0" Units="m/s" Range="0.9 - 1.7 m/s" Subtype="Velocity" />
-				<MeasurementView Name="AoV2Mean" Label="Mean Velocity" Format="0.0" Units="m/s" Range="" Subtype="Velocity" />
-				<MeasurementView Name="AoV2VTI_mVTI" Label="LV V2 VTI" Format="0.0" Units="cm" Subtype="VTI" />
-				<MeasurementView Name="AoMaxPG" Label="Peak PG" Format="0" Units="mmHg" Range="&lt;10 mmHg" Subtype="PG" />
-				<MeasurementView Name="AoMeanPG" Label="Mean PG" Format="0" Units="mmHg" Range="&lt;10 mmHg" Subtype="PG" />
-				<MeasurementView Name="AoPHT" Label="Press Half Time" Format="0.0" Units="ms" Subtype="PH" />
-				<MeasurementView Name="AVA" Label="AVA" Format="0.0" Units="cm²" Range="2.5 – 3.5 cm²" Subtype="Area" />
+				<MeasurementView Name="AoV2Max" Label="Peak Velocity" Format="0.0" Units="m/s" Range="0.9 - 1.7 m/s" Subtype="Velocity" Type="Doppler Velocity" />
+				<MeasurementView Name="AoV2Mean" Label="Mean Velocity" Format="0.0" Units="m/s" Range="" Subtype="Velocity" Type="Mean Velocity" />
+				<MeasurementView Name="AoV2VTI_mVTI" Label="Ao VTI" Format="0.0" Units="cm" Subtype="VTI" Type="Doppler VTI" />
+				<MeasurementView Name="AoMaxPG" Label="Peak PG" Format="0" Units="mmHg" Range="&lt;10 mmHg" Calculation="if (AoV2Max&gt;0, Pow(AoV2Max, 2)*4, '')" />
+				<MeasurementView Name="AoMeanPG" Label="Mean PG" Format="0" Units="mmHg" Range="&lt;10 mmHg" Subtype="AV" Type="Mean Pressure Gradient" />
+				<MeasurementView Name="AoPHT" Label="Press Half Time" Format="0.0" Units="ms" Subtype="PH" Type="Pressure Halftime" />
+				<MeasurementView Name="AVA" Label="AVA" Format="0.00" Units="cm²" Range="2.5 – 3.5 cm²" Calculation="if(AoV2Max&gt;0, (0.785*(LVOTDiam_2D)^2 * LVV1Max)/AoV2Max, '')" />
+				<MeasurementView Name="AVA_VTI" Label="AVA (VTI)" Format="0.00" Units="cm²" Range="2.5 - 3.5 cm²" Calculation="if(AoV2VTI_mVTI&gt;0, (0.785*(LVOTDiam_2D)^2 * LVV1VTI)/AoV2VTI_mVTI, '')" />
+				<MeasurementView Name="DVI" Label="DVI" Format="0.0" Units="" Range="" Calculation="if (LVV1VTI&gt;0, LVV1VTI/AoV2VTI_mVTI, '')" />
 			</Measurements>
 		</MeasurementGroupView>
 	</MeasurementGroups>
